@@ -1,0 +1,40 @@
+.main-header {
+  @include borderx;
+  min-height: 100vh;
+  padding-top: 35px;
+  
+  background: url("../img/bg-header.jpg") no-repeat center/cover fixed;
+
+  &__title {
+    margin: 270px auto 20px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4em;
+    font-family: $OpenSans;
+    color: #fff;
+  }
+
+  &__descr {
+    margin-bottom: 50px;
+
+    font-style: italic;
+    font-size: 1.66em;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    padding-top: 20px;
+
+    &__title {
+      margin-top: 60px;
+      font-size: 3em;
+    }
+
+    &__descr {
+      margin-bottom: 50px;
+
+      font-size: 1.2em;
+    }
+  }
+}

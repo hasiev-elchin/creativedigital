@@ -1,0 +1,122 @@
+.works {
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  color: #fff;
+
+  background: #b0add0 url("../img/bg-our-work.jpg") no-repeat center/cover;
+
+  &__title {
+    position: relative;
+
+    display: block;
+    padding-top: 95px;
+    margin-bottom: 65px;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    font-family: $OpenSans;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      display: block;
+      width: 40px;
+      height: 60px;
+      margin-left: -20px;
+      
+      background: url("../img/works-ico.png") no-repeat center;
+    }
+  }
+
+  &__slider {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  &__slide {
+    outline: none;
+
+    img {
+      width: 100%;
+      max-width: 730px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 193px;
+    padding: 12px 0;
+    border: 1px solid #fff;
+    margin: 0 auto;
+
+    text-decoration: none !important;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #fff;
+
+    background-color: transparent;
+    transition-duration: .3s;
+    transition-property: background-color, color;
+
+    &:hover {
+      color: #23527c;
+
+      background-color: #ffffff;
+    }
+  }
+}
+
+.slick-dots {
+  max-width: 120px;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 50px;
+
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 6px;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.slick-active button {
+      background-color: #fff;
+    }
+  }
+
+  button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 2px solid #fff;
+
+    background-color: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,27 @@
+.main-footer {
+  padding: 75px 0;
+
+  background-color: #9f9acf;
+
+  &__copyright {
+    padding-top: 20px;
+
+    font-size: 1em;
+    font-family: $PTSans;
+    color: #fff;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__social {
+    margin: 0;
+  }
+
+  @media (max-width: 1000px) {
+    &__copyright {
+      text-align: center;
+    }
+  }
+}

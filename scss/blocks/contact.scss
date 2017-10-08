@@ -1,0 +1,233 @@
+.contact {
+  position: relative;
+
+  background-color: rgba(136,131,184, .5);
+  overflow: hidden;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+  }
+
+  .map {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 900px;
+
+    opacity: .3;
+  }
+
+  &__title {
+    position: relative;
+
+    padding-top: 85px;
+    margin: 0;
+    margin-top: 55px;
+
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    font-family: $OpenSans;
+    color: #fff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      display: block;
+      width: 42px;
+      height: 60px;
+      margin-left: -21px;
+      
+      background: url("../img/contact__title-icon.png") no-repeat center;
+    }
+  }
+  &__form {
+    max-width: 860px;
+    margin: 0 auto;
+
+    &-input {
+      @include borderx();
+
+      display: block;
+      float: left;
+      width: 48%;
+      height: 56px;
+      padding: 20px 25px;
+      border: none;
+      margin-top: 25%;
+
+      background-color: rgba(235,235,235,.5);
+      outline: none;
+      transition-property: background-color, transform;
+      transition-duration: .2s;
+      @include borderRadius(3px);
+
+      &:focus {
+        background-color: rgba(255,255,255,.6);
+        transform: scale(1.08);
+      }
+
+      &--email {
+        float: right;
+      }
+    }
+
+    textarea {
+      @include borderx();
+
+      width: 100%;
+      height: 200px;
+      padding: 20px 25px;
+      margin-top: 25px;
+      margin-bottom: 55px;
+      border: none;
+
+      background-color: rgba(235,235,235,.5);
+      outline: none;
+      transition-property: background-color, transform;
+      transition-duration: .2s;
+      @include borderRadius(3px);
+
+      &:focus {
+        background-color: rgba(255,255,255,.6);
+        transform: scale(1.05);
+      }
+    }
+
+    ::-webkit-input-placeholder {
+      color: #fff;
+      font-style: italic;
+    }
+
+    ::-moz-placeholder {
+      color: #797b7f;
+      font: 400 14px Arial, sans-serif;
+    }
+
+    :-moz-placeholder {
+      color: #797b7f;
+      font: 400 14px Arial, sans-serif;
+    }
+
+    :-ms-input-placeholder {
+      color: #797b7f;
+      font: 400 14px Arial, sans-serif;
+    }
+  }
+
+  &__btn {
+    @include btn();
+    
+    display: block;
+    padding: 25px 0;
+    width: 290px;
+    border-bottom: 4px solid #8783b0;
+    margin: 0 auto;
+
+    font-weight: 700;
+    font-size: 1.1em;
+    font-family: $OpenSans;
+    color: #fff;
+
+    background-color: #9f9acf;
+    transition: .3s;
+    @include borderRadius(3px);
+
+    &:hover {
+      border-bottom-color: #9b96ca;
+      background-color: #827faa;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+      transform: translateY(4px);
+    }
+  }
+
+  &__interactive-btn {
+    position: absolute;
+    right: 0;
+    top: 218px;
+    z-index: 1;
+
+    display: block;
+    border: none;
+
+    width: 91px;
+    height: 91px;
+
+    background: rgb(159,154,207) url("../img/address-icon.png") no-repeat center;
+    outline: none;
+    transition: right .2s;
+
+    &:nth-child(2) {
+      top: calc(218px + 91px);
+      
+      background-image: url("../img/phone-icon.png");
+    }
+
+    &:hover {
+      right: 257px;
+    }
+  }
+
+  &__address,
+  &__tel {
+    @include borderx();
+    display: block;
+    width: 257px;
+    height: 91px;
+    padding: 8px 40px 0;
+    margin: 0;
+    margin-left: 91px;
+
+    text-align: center;
+    font-size: 1em;
+
+    background-color: rgba(255,255,255, .5);
+  }
+
+}
+
+.scroll-top {
+  position: absolute;
+  right: 130px;
+  bottom: 46px;
+  z-index: 1;
+
+  display: block;
+  border: none;
+
+  width: 84px;
+  height: 84px;
+
+  font-size: 0;
+
+  background: rgba(159,154,207, .5) url("../img/arrow-up-icon.png") no-repeat center;
+  outline: none;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: rgb(159,154,207);
+  }
+}
+
+@media (max-width: 767px) {
+  .contact__form-input {
+    width: 100%;
+
+    &--email {
+      margin-top: 27px;
+    }
+  }
+}

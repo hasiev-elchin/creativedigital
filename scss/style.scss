@@ -1,0 +1,18 @@
+@import "mixins";
+@import "basis";
+
+@import "blocks/main-header";
+@import "blocks/main-nav";
+@import "blocks/about-us";
+@import "blocks/inner";
+@import "blocks/services";
+@import "blocks/works";
+@import "blocks/team";
+@import "blocks/social";
+@import "blocks/contact";
+@import "blocks/main-footer";
+
+.map {
+  width: 100%;
+  min-height: 900px;
+}

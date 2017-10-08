@@ -1,0 +1,31 @@
+@mixin list-unstyled() {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+@mixin btn() {
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin borderx() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin borderRadius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}

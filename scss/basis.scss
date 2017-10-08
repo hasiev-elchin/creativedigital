@@ -1,0 +1,27 @@
+$PTSans: 'PT Sans', sans-serif;
+$OpenSans: 'Open Sans', sans-serif;
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  background-color: transparent;
+  color: transparent;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: $PTSans;
+  color: #665f60;
+}
+
+.center-block {
+  display: block;
+  float: none;
+  margin: 0 auto;
+}

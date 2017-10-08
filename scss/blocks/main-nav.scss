@@ -1,0 +1,60 @@
+nav {
+  border: none !important;
+
+  background-color: transparent !important;
+
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 22px;
+  border: none;
+
+  li {
+
+    &.active {
+      a {
+        color: #23527c !important;
+
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 1.33em;
+    font-family: $OpenSans;
+    color: #fff !important;
+    transition-property: color;
+    transition-duration: .3s;
+
+    &:hover {
+      color: #2e6da4 !important;
+    }
+  }
+
+  &__toggle {
+    margin-top: 40px;
+
+    border: none;
+    
+    & > span {
+      background-color: #fff !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    display: block;
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+}
