@@ -48,11 +48,22 @@
 		});
 	}
 
+	$(document).ready(function(){
+		$(".main-nav").on("click","a", function (event) {
+			event.preventDefault();
+
+			var id  = $(this).attr('href'),
+
+				top = $(id).offset().top;
+
+			$('body,html').animate({scrollTop: top}, 1000);
+		});
+	});
+
 	$('.scroll-top').click(function () {
-		$('.overlay').trigger('click');
 		$('html, body').animate({
 			scrollTop: 0
-		}, 300);
+		}, 1000);
 	});
 
 	initMap();
